@@ -106,7 +106,7 @@ Our app allows users to keep track of, and view player stats in their basketball
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+ <img src="wireframe.webp" width=600>
 
 <br>
 
