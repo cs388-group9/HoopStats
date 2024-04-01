@@ -124,7 +124,7 @@ Our app allows users to keep track of, and view player stats in their basketball
 
 [Add screenshot of your Project Board with three milestones visible in
 this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="milestones.png" width=600>
 
 ## Issue cards
 
