@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798583257368",
+    "project_id": "hoopstats-d8522",
+    "storage_bucket": "hoopstats-d8522.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798583257368:android:89159462273faf1695c66d",
+        "android_client_info": {
+          "package_name": "com.example.hoopstats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCvn28CsOgU0OTFuVkwJD4lJjP-cZnR0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.hoopstats.app-mergeDebugResources-35:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\arsal\\.gradle\\caches\\transforms-3\\a82ccc7d749ce9b6fbfa5efe4248a2e8\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}
