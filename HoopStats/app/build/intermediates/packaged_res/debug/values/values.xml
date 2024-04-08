@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="dark_green">#006400</color>
+    <color name="dark_red">#8B0000</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="purple">#800080</color>
+    <color name="yellow">#FFFF00</color>
+    <drawable name="background_gradient">@drawable/gradient_background</drawable>
     <string name="app_name">HoopStats</string>
     <string name="gcm_defaultSenderId" translatable="false">798583257368</string>
     <string name="google_api_key" translatable="false">AIzaSyDCvn28CsOgU0OTFuVkwJD4lJjP-cZnR0Q</string>
@@ -9,9 +13,11 @@
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDCvn28CsOgU0OTFuVkwJD4lJjP-cZnR0Q</string>
     <string name="google_storage_bucket" translatable="false">hoopstats-d8522.appspot.com</string>
     <string name="project_id" translatable="false">hoopstats-d8522</string>
-    <style name="Base.Theme.HoopStats" parent="Theme.Material3.DayNight.NoActionBar">
-        
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         
     </style>
-    <style name="Theme.HoopStats" parent="Base.Theme.HoopStats"/>
+    <style name="Theme.HoopStats" parent="Theme.AppCompat.Light.NoActionBar">
+        
+        <item name="android:windowBackground">@drawable/background_gradient</item>
+    </style>
 </resources>

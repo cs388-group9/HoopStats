@@ -23,6 +23,9 @@ class GamesMain : AppCompatActivity() {
         gamesRecyclerView.adapter = gameAdapter
         gamesRecyclerView.layoutManager = LinearLayoutManager(this)
 
+        // Initialize noGamesTextView
+        noGamesTextView = findViewById(R.id.noGamesTextView)
+
         // Load games data or display message
         if (gamesList.isEmpty()) {
             noGamesTextView.visibility = View.VISIBLE
@@ -34,6 +37,7 @@ class GamesMain : AppCompatActivity() {
             gameAdapter.notifyDataSetChanged()
         }
     }
+
 
     // Function to fetch games (replace this with your actual implementation)
     private fun getGames(): List<Game> {
