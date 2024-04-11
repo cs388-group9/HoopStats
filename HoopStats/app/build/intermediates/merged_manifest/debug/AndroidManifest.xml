@@ -38,12 +38,17 @@
         android:theme="@style/Theme.HoopStats" >
         <activity
             android:name="com.example.hoopstats.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="com.example.hoopstats.GamesMain" >
+
+            <!-- Any additional activity configuration here -->
         </activity>
 
         <provider
