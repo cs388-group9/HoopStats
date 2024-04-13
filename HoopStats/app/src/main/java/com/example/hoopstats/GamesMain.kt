@@ -1,4 +1,6 @@
 package com.example.hoopstats
+
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -35,6 +37,11 @@ class GamesMain : AppCompatActivity() {
             // If games exist, add them to the RecyclerView
             gamesList.addAll(getGames()) // Replace getGames() with your function to fetch games
             gameAdapter.notifyDataSetChanged()
+        }
+
+        // Set up click listener for the create game button
+        findViewById<View>(R.id.createGameButton).setOnClickListener {
+            startActivity(Intent(this, CreateGame::class.java))
         }
     }
 
