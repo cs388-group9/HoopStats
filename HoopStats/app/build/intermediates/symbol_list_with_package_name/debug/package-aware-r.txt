@@ -3479,7 +3479,6 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id name
 id nav_controller_view_tag
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
