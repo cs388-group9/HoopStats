@@ -5,5 +5,7 @@
     <color name="dark_green">#006400</color>
     <color name="yellow">#FFFF00</color>
     <color name="purple">#800080</color>
+    <color name="blue">#459DE4</color>
+    <color name="red">#FF0000</color>
     <!-- Add more colors as needed -->
 </resources>
