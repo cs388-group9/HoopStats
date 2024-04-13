@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-47:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-47:12
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\arsal\.gradle\caches\transforms-3\aba15ef4e15e5963aff781ad1efec9d6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [io.coil-kt:coil-compose:2.2.2] C:\Users\arsal\.gradle\caches\transforms-3\27035a1e6024f71daa6b0d13dcb55662\transformed\coil-compose-2.2.2\AndroidManifest.xml:2:1-9:12
@@ -136,8 +136,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.6.1] C:
 	android:name
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-45:19
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-45:19
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-39:19
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-39:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\arsal\.gradle\caches\transforms-3\aba15ef4e15e5963aff781ad1efec9d6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -223,33 +223,33 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\arsal\.gradle\cach
 	android:dataExtractionRules
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:8:9-65
 activity#com.example.hoopstats.MainActivity
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:17:9-28:20
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:17:9-22:20
 	android:exported
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:19:13-37
 	android:theme
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:20:13-44
 	android:name
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:18:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:23:13-27:29
-action#android.intent.action.MAIN
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:24:17-69
-	android:name
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:24:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:26:17-77
-	android:name
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:26:27-74
 activity#com.example.hoopstats.SignInActivity
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:30:9-38:20
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:exported
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:32:13-36
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:31:13-43
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:25:13-43
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:27:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:30:27-74
 activity#com.example.hoopstats.GamesMain
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:40:9-42:20
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:9-36:20
 	android:name
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:40:19-44
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:19-44
 uses-sdk
 INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml
