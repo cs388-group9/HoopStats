@@ -24,8 +24,12 @@ class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdap
     class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(game: Game) {
             // Bind game data to views
-            itemView.findViewById<TextView>(R.id.gameNameTextView).text = game.gameName
-            // Add bindings for other game attributes if needed
+            val gameNameTextView = itemView.findViewById<TextView>(R.id.gameNameTextView)
+            val gameIdTextView = itemView.findViewById<TextView>(R.id.gameIdTextView)
+
+            gameNameTextView.text = game.gameName
+            gameIdTextView.text = "Game ID: ${game.gameId}"
         }
     }
+
 }
