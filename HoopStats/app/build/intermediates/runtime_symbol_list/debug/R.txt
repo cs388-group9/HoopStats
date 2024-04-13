@@ -3478,7 +3478,6 @@ int id mtrl_picker_text_input_range_start 0x7f08013f
 int id mtrl_picker_title_text 0x7f080140
 int id mtrl_view_tag_bottom_padding 0x7f080141
 int id multiply 0x7f080142
-int id name 0x7f080143
 int id nav_controller_view_tag 0x7f080144
 int id navigation_bar_item_active_indicator_view 0x7f080145
 int id navigation_bar_item_icon_container 0x7f080146

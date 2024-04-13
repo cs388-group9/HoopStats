@@ -19,7 +19,6 @@ id gameNameTextView
 id gamesRecyclerView
 id joinGameButton
 id logout_button
-id name
 id noGamesTextView
 id signInButton
 id titleTextView
