@@ -3236,6 +3236,7 @@ int id animateToStart 0x7f080050
 int id antiClockwise 0x7f080051
 int id anticipate 0x7f080052
 int id arc 0x7f080053
+int id arrowTextView 0x7f080212
 int id asConfigured 0x7f080054
 int id async 0x7f080055
 int id auto 0x7f080056
@@ -3365,6 +3366,7 @@ int id forever 0x7f0800d1
 int id fragment_container_view_tag 0x7f0800d2
 int id frost 0x7f0800d3
 int id fullscreen_header 0x7f0800d4
+int id gameIdTextView 0x7f080213
 int id gameNameEditText 0x7f08020c
 int id gameNameTextView 0x7f0800d5
 int id gamesRecyclerView 0x7f0800d6

@@ -3237,6 +3237,7 @@ id animateToStart
 id antiClockwise
 id anticipate
 id arc
+id arrowTextView
 id asConfigured
 id async
 id auto
@@ -3366,6 +3367,7 @@ id forever
 id fragment_container_view_tag
 id frost
 id fullscreen_header
+id gameIdTextView
 id gameNameEditText
 id gameNameTextView
 id gamesRecyclerView

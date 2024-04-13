@@ -45,7 +45,7 @@
 24-->[androidx.core:core:1.12.0] C:\Users\santa\.gradle\caches\transforms-3\6498fc977e655a79ded094de70e3a6e4\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
 25
 26    <application
-26-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:5:5-36:19
+26-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:5:5-37:19
 27        android:allowBackup="true"
 27-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:9-35
 28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -87,11 +87,11 @@
 47            </intent-filter>
 48        </activity>
 49        <activity android:name="com.example.hoopstats.CreateGame" />
-49-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:29:9-48
+49-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:29:9-30:15
 49-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:29:19-45
 50        <activity android:name="com.example.hoopstats.GamesMain" >
-50-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:31:9-33:20
-50-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:31:19-44
+50-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:32:9-34:20
+50-->C:\Users\santa\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:32:19-44
 51
 52            <!-- Any additional activity configuration here -->
 53        </activity>

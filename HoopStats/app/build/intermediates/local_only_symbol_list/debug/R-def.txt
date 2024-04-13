@@ -10,8 +10,10 @@ drawable background_gradient
 drawable gradient_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id arrowTextView
 id buttonGroup
 id createGameButton
+id gameIdTextView
 id gameNameEditText
 id gameNameTextView
 id gamesRecyclerView
