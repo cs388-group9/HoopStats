@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array number_of_players
 color blue
 color dark_green
 color dark_red
@@ -13,15 +14,24 @@ drawable google
 drawable gradient_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id arrowTextView
 id buttonGroup
 id createGameButton
+id gameIdTextView
+id gameNameEditText
 id gameNameTextView
 id gamesRecyclerView
 id joinGameButton
 id logout_button
 id noGamesTextView
+id playersSpinner
 id signInButton
+id submitButton
+id teamName1EditText
+id teamName2EditText
+id teamNamesTitleTextView
 id titleTextView
+layout activity_create_game
 layout activity_games_main
 layout activity_main
 layout activity_sign_in

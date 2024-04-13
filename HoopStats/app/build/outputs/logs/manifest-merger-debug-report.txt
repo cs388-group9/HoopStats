@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-44:12
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:2:1-44:12
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\arsal\.gradle\caches\transforms-3\aba15ef4e15e5963aff781ad1efec9d6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [io.coil-kt:coil-compose:2.2.2] C:\Users\arsal\.gradle\caches\transforms-3\27035a1e6024f71daa6b0d13dcb55662\transformed\coil-compose-2.2.2\AndroidManifest.xml:2:1-9:12
@@ -136,8 +136,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.6.1] C:
 	android:name
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:4:22-64
 application
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-39:19
-INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-39:19
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-42:19
+INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:6:5-42:19
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] C:\Users\arsal\.gradle\caches\transforms-3\18011aebfbc4b6e396ff7ea26c6dfd5e\transformed\material-1.11.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\arsal\.gradle\caches\transforms-3\aba15ef4e15e5963aff781ad1efec9d6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -246,10 +246,14 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
 		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:30:27-74
-activity#com.example.hoopstats.GamesMain
-ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:9-36:20
+activity#com.example.hoopstats.CreateGame
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:9-35:15
 	android:name
-		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:19-44
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:34:19-45
+activity#com.example.hoopstats.GamesMain
+ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:37:9-39:20
+	android:name
+		ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:37:19-44
 uses-sdk
 INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml
