@@ -5,7 +5,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.hoopstats.models.Game
 import com.google.firebase.database.*
 import java.util.Random
 
