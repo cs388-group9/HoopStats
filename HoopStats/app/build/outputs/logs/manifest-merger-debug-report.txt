@@ -15,23 +15,25 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\arsal\.gradle\caches\t
 MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b8a568d21493f615f1849c5b311de570\transformed\play-services-auth-21.0.0\AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5bd5f4f4bc2ea388eb4f1d4368926172\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\arsal\.gradle\caches\transforms-3\0c9f303af381bc7de90259759edd9847\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\arsal\.gradle\caches\transforms-3\31d7bdb5a1e0789b56c78a93b95f04f5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\arsal\.gradle\caches\transforms-3\5485536b670235f995192d16dbbd29c0\transformed\play-services-fido-20.0.1\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\arsal\.gradle\caches\transforms-3\aad284467a29efe356b4d3ebe6735621\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\arsal\.gradle\caches\transforms-3\58fb9761c47a027c8520a5a3bae16b17\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\563b340a6a277eadbb58eaf87c7bb2ca\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-analytics:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\84646a590b104dddcdaf83ffb98d356c\transformed\firebase-analytics-21.6.1\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:17:1-43:12
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\5fa62b6513606c6be17de222ab968195\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:2:1-18:12
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:15:1-41:12
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\43730f24de53d0c53b7ec1d5672ad338\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:17:1-32:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\arsal\.gradle\caches\transforms-3\f41689ad7bc2b7ba98811668c26d6914\transformed\play-services-stats-17.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\920103ac177a3e7121a5cfbea0dea063\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -121,14 +123,16 @@ uses-permission#android.permission.INTERNET
 ADDED from C:\Users\arsal\AndroidStudioProjects\HoopStats\HoopStats\app\src\main\AndroidManifest.xml:4:5-67
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\dd955664aa1385bfb31c570b030677fc\transformed\play-services-measurement-sdk-api-21.6.1\AndroidManifest.xml:23:5-67
@@ -148,12 +152,16 @@ MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradl
 MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5bd5f4f4bc2ea388eb4f1d4368926172\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:25:5-36:19
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\arsal\.gradle\caches\transforms-3\5485536b670235f995192d16dbbd29c0\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\arsal\.gradle\caches\transforms-3\5485536b670235f995192d16dbbd29c0\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\arsal\.gradle\caches\transforms-3\aad284467a29efe356b4d3ebe6735621\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\arsal\.gradle\caches\transforms-3\aad284467a29efe356b4d3ebe6735621\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\arsal\.gradle\caches\transforms-3\58fb9761c47a027c8520a5a3bae16b17\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\arsal\.gradle\caches\transforms-3\58fb9761c47a027c8520a5a3bae16b17\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-analytics:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\84646a590b104dddcdaf83ffb98d356c\transformed\firebase-analytics-21.6.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\84646a590b104dddcdaf83ffb98d356c\transformed\firebase-analytics-21.6.1\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:29:5-41:19
@@ -162,16 +170,14 @@ MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:11:5-22:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\5fa62b6513606c6be17de222ab968195\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\5fa62b6513606c6be17de222ab968195\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
 MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
 MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:28:5-44:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:29:5-30:19
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\arsal\.gradle\caches\transforms-3\f41689ad7bc2b7ba98811668c26d6914\transformed\play-services-stats-17.0.2\AndroidManifest.xml:7:5-20
@@ -280,18 +286,24 @@ MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradl
 MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5bd5f4f4bc2ea388eb4f1d4368926172\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:18:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\arsal\.gradle\caches\transforms-3\0c9f303af381bc7de90259759edd9847\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\arsal\.gradle\caches\transforms-3\0c9f303af381bc7de90259759edd9847\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\arsal\.gradle\caches\transforms-3\31d7bdb5a1e0789b56c78a93b95f04f5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\arsal\.gradle\caches\transforms-3\31d7bdb5a1e0789b56c78a93b95f04f5\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\arsal\.gradle\caches\transforms-3\5485536b670235f995192d16dbbd29c0\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\arsal\.gradle\caches\transforms-3\5485536b670235f995192d16dbbd29c0\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\arsal\.gradle\caches\transforms-3\aad284467a29efe356b4d3ebe6735621\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\arsal\.gradle\caches\transforms-3\aad284467a29efe356b4d3ebe6735621\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\b985101a2d833821268f1a0e3ddb928e\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\arsal\.gradle\caches\transforms-3\58fb9761c47a027c8520a5a3bae16b17\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\arsal\.gradle\caches\transforms-3\58fb9761c47a027c8520a5a3bae16b17\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\563b340a6a277eadbb58eaf87c7bb2ca\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\563b340a6a277eadbb58eaf87c7bb2ca\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\84646a590b104dddcdaf83ffb98d356c\transformed\firebase-analytics-21.6.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\84646a590b104dddcdaf83ffb98d356c\transformed\firebase-analytics-21.6.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:20:5-44
@@ -300,20 +312,18 @@ MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\5fa62b6513606c6be17de222ab968195\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\5fa62b6513606c6be17de222ab968195\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\arsal\.gradle\caches\transforms-3\ccccd2312d7fbb612a2de67c34b715f0\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
 MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
 MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\arsal\.gradle\caches\transforms-3\befa99c7e65f011bd653935638c75fdd\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\43730f24de53d0c53b7ec1d5672ad338\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\arsal\.gradle\caches\transforms-3\43730f24de53d0c53b7ec1d5672ad338\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\8baa3740d1c0a068ed1976f05a24e008\transformed\play-services-measurement-sdk-21.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.2] C:\Users\arsal\.gradle\caches\transforms-3\f41689ad7bc2b7ba98811668c26d6914\transformed\play-services-stats-17.0.2\AndroidManifest.xml:5:5-44
@@ -494,6 +504,8 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5bd5f4f4bc2ea388eb4f1d4368926172\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:26:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:34:9-40:19
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:34:9-40:19
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:12:9-21:19
@@ -518,14 +530,16 @@ ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle
 		ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5bd5f4f4bc2ea388eb4f1d4368926172\transformed\firebase-auth-ktx-22.3.1\AndroidManifest.xml:12:17-119
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:7:5-79
 MERGED from [com.google.firebase:firebase-installations:17.2.0] C:\Users\arsal\.gradle\caches\transforms-3\58ad685f4e6a09d3f08374aa9a6c0184\transformed\firebase-installations-17.2.0\AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\dd955664aa1385bfb31c570b030677fc\transformed\play-services-measurement-sdk-api-21.6.1\AndroidManifest.xml:24:5-79
@@ -586,14 +600,26 @@ ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\arsal\.gradle\caches\transforms-3\5d3be691956d5abd32d02268b295f4bb\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+meta-data#com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:29:13-31:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:31:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\arsal\.gradle\caches\transforms-3\921542199fdff82d94ca1bd6a473e946\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:30:17-120
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.1] C:\Users\arsal\.gradle\caches\transforms-3\2247e84c688180db65f929f6d865f396\transformed\firebase-database-20.3.1\AndroidManifest.xml:33:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\arsal\.gradle\caches\transforms-3\52f5abbedfea6c08973b0c277ff98410\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.android.gms:play-services-measurement-api:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\ef883bf3ce215802159023680e98808b\transformed\play-services-measurement-api-21.6.1\AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:25:5-68
@@ -674,6 +700,10 @@ ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\c
 		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:37:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\arsal\.gradle\caches\transforms-3\d31f5537a93a2838d30e5c729d13cfc9\transformed\firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
 ADDED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\76c3bd91bd4f4d904e70c25320728514\transformed\play-services-measurement-impl-21.6.1\AndroidManifest.xml:26:5-110
@@ -706,10 +736,6 @@ ADDED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\ar
 		ADDED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:43:13-69
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:21.6.1] C:\Users\arsal\.gradle\caches\transforms-3\abce5dd5531d32a14ada594551671d02\transformed\play-services-measurement-21.6.1\AndroidManifest.xml:40:13-87
-uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
-ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
-	android:name
-		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\arsal\.gradle\caches\transforms-3\0e9ee0fd21e4a0f1bc6a8e61d46721a3\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\arsal\.gradle\caches\transforms-3\8ec4e8492e21383d01ba48f447637b9e\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\arsal\.gradle\caches\transforms-3\c34508b181aad881651e3f1bf03fb5be\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
