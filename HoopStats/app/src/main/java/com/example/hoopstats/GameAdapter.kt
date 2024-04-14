@@ -1,9 +1,12 @@
 package com.example.hoopstats
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hoopstats.models.Game
+
 
 class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
 
@@ -24,12 +27,11 @@ class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdap
     class GameViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(game: Game) {
             // Bind game data to views
-            val gameNameTextView = itemView.findViewById<TextView>(R.id.gameNameTextView)
-            val gameIdTextView = itemView.findViewById<TextView>(R.id.gameIdTextView)
+            val gameNameTextView: TextView = itemView.findViewById(R.id.gameNameTextView)
+            val gameIdTextView: TextView = itemView.findViewById(R.id.gameIdTextView)
 
             gameNameTextView.text = game.gameName
             gameIdTextView.text = "Game ID: ${game.gameId}"
         }
     }
-
 }
