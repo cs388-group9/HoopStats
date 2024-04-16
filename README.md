@@ -162,11 +162,13 @@ this section]
 - [X] **Create Game Screen**
   - As a user, I want to input basic information to create a new game so that I can start playing.
 
-- [X] **Search Game Screen**
-  - As a user, I want to search for an existing game in the database using its unique ID so that I can access it.
-
 - List any pending user stories / any user stories you decided to cut
-from the original requirements
+- Tracking stats needs to be implemented
+- adding players needs to be implemented
+- joining a game needs to be implemented
+
+[Add video/gif of your current application that shows build progress]
+<img src="ezgif-3-02aa5b6f63.gif" width=600>
 
 [Add video/gif of your current application that shows build progress]
 <img src="https://github.com/cs388-group9/HoopStats/blob/dev/ezgif-3-02aa5b6f63.gif" width=600>
