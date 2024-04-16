@@ -62,23 +62,28 @@ class GamesMain : AppCompatActivity() {
     }
 
     private fun fetchGames() {
-        val databaseReference = FirebaseDatabase.getInstance().getReference("games")
-        databaseReference.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                gamesList.clear()
-                dataSnapshot.children.forEach { snapshot ->
-                    snapshot.getValue(Game::class.java)?.let { game ->
-                        gamesList.add(game)
-                    }
-                }
-                gameAdapter.notifyDataSetChanged()
-                updateUI()
-            }
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId == null) {
+            Log.e("GamesMain", "User not logged in")
+            return
+        }
 
-            override fun onCancelled(databaseError: DatabaseError) {
-                Log.e("GamesMain", "Database error: ${databaseError.message}")
-            }
-        })
+        val databaseReference = FirebaseDatabase.getInstance().getReference("games")
+        databaseReference.orderByChild("creatorUserId").equalTo(userId)
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    gamesList.clear()
+                    dataSnapshot.children.mapNotNullTo(gamesList) { snapshot ->
+                        snapshot.getValue(Game::class.java)
+                    }
+                    gameAdapter.notifyDataSetChanged()
+                    updateUI()
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    Log.e("GamesMain", "Database error: ${databaseError.message}")
+                }
+            })
     }
 
     private fun updateUI() {
