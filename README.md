@@ -167,8 +167,6 @@ this section]
 - adding players needs to be implemented
 - joining a game needs to be implemented
 
-[Add video/gif of your current application that shows build progress]
-<img src="ezgif-3-02aa5b6f63.gif" width=600>
 
 [Add video/gif of your current application that shows build progress]
 <img src="https://github.com/cs388-group9/HoopStats/blob/dev/ezgif-3-02aa5b6f63.gif" width=600>
