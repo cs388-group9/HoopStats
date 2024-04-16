@@ -152,7 +152,20 @@ this section]
 
 ## Completed user stories
 
-- List the completed user stories from this unit
+- [X] **Landing Screen**
+  - As a user, I want to log in from the landing screen so that I can access my account.
+
+- [X] **Games Screen**
+  - As a user, I want to view and select games from my account so that I can start playing.
+  - As a user, I want to be able to create a new game or add an existing one from the games screen.
+  - As a user, I want to be able to check the weather forecast by clicking a button on the games screen.
+
+- [X] **Create Game Screen**
+  - As a user, I want to input basic information to create a new game so that I can start playing.
+
+- [X] **Search Game Screen**
+  - As a user, I want to search for an existing game in the database using its unique ID so that I can access it.
+
 - List any pending user stories / any user stories you decided to cut
 from the original requirements
 
