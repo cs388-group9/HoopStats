@@ -158,7 +158,6 @@ this section]
 - [X] **Games Screen**
   - As a user, I want to view and select games from my account so that I can start playing.
   - As a user, I want to be able to create a new game or add an existing one from the games screen.
-  - As a user, I want to be able to check the weather forecast by clicking a button on the games screen.
 
 - [X] **Create Game Screen**
   - As a user, I want to input basic information to create a new game so that I can start playing.
