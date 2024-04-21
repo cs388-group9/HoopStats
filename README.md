@@ -148,16 +148,28 @@ this section]
 
 ## GitHub Project board
 
-[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Add screenshot of your Project Board with the updated status of issues for Milestone 3. Note that these should include the updated issues you worked on for this sprint and not be a duplicate of Milestone 2 Project board.] <img src="https://github.com/cs388-group9/HoopStats/blob/dev/unit9.png" width=600>
 
 ## Completed user stories
 
-- List the completed user stories from this unit
+- [X] **Landing Screen**
+  - As a user, I want to log in from the landing screen so that I can access my account.
+
+- [X] **Games Screen**
+  - As a user, I want to view and select games from my account so that I can start playing.
+  - As a user, I want to be able to create a new game or add an existing one from the games screen.
+
+- [X] **Create Game Screen**
+  - As a user, I want to input basic information to create a new game so that I can start playing.
+
 - List any pending user stories / any user stories you decided to cut
-from the original requirements
+- Tracking stats needs to be implemented
+- adding players needs to be implemented
+- joining a game needs to be implemented
+
 
 [Add video/gif of your current application that shows build progress]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://github.com/cs388-group9/HoopStats/blob/dev/ezgif-3-02aa5b6f63.gif" width=600>
 
 ## App Demo Video
 
