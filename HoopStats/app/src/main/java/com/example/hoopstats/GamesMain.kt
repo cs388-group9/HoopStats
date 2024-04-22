@@ -34,6 +34,7 @@ class GamesMain : AppCompatActivity() {
         setContentView(R.layout.activity_games_main)
 
         gamesRecyclerView = findViewById(R.id.gamesRecyclerView)
+
         noGamesTextView = findViewById(R.id.noGamesTextView)
         gamesRecyclerView.layoutManager = LinearLayoutManager(this)
         gameAdapter = GameAdapter(gamesList)
@@ -60,7 +61,6 @@ class GamesMain : AppCompatActivity() {
             .build()
         return GoogleSignIn.getClient(this, gso)
     }
-
     private fun fetchGames() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId == null) {
@@ -73,8 +73,13 @@ class GamesMain : AppCompatActivity() {
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     gamesList.clear()
-                    dataSnapshot.children.mapNotNullTo(gamesList) { snapshot ->
-                        snapshot.getValue(Game::class.java)
+                    for (snapshot in dataSnapshot.children) {
+                        val game = snapshot.getValue(Game::class.java)
+                        if (game != null) {
+                            gamesList.add(game)
+                        } else {
+                            Log.e("GamesMain", "Error parsing game data: ${snapshot.key}")
+                        }
                     }
                     gameAdapter.notifyDataSetChanged()
                     updateUI()

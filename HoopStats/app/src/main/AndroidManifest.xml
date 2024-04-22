@@ -33,6 +33,7 @@
 
         <activity android:name=".CreateGame"
             />
+        <activity android:name=".TrackStats" />
 
         <activity android:name=".GamesMain">
             <!-- Any additional activity configuration here -->
