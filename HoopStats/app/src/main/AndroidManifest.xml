@@ -19,6 +19,11 @@
             android:exported="true"
             android:theme="@style/AppTheme">
         </activity>
+        <activity
+            android:name=".JoinGame"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+        </activity>
 
         <activity
             android:name=".SignInActivity"
