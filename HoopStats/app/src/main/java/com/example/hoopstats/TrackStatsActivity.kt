@@ -27,6 +27,7 @@ class TrackStatsActivity : AppCompatActivity() {
     private var team1Id: String? = null
     private var team2Id: String? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_track_stats)
@@ -37,7 +38,24 @@ class TrackStatsActivity : AppCompatActivity() {
         initializeViews()
         setupRecyclerViews()
         fetchGameData(gameId)
+
+        val viewStatsButton = findViewById<Button>(R.id.viewStatsButton)
+        viewStatsButton.setOnClickListener {
+            // Create an intent to navigate to ViewStatsActivity
+// Inside the viewStatsButton.setOnClickListener
+            val intent = Intent(this, ViewStatsActivity::class.java).apply {
+                putExtra("gameId", gameId)
+                putExtra("gameName", gameTitleTextView.text.toString())
+                putExtra("teamAPlayers", teamAPlayers.toTypedArray())
+                putExtra("teamBPlayers", teamBPlayers.toTypedArray())
+                putExtra("team1Name", team1NameTextView.text.toString())
+                putExtra("team2Name", team2NameTextView.text.toString())
+            }
+            startActivity(intent)
+
+        }
     }
+
 
     private fun initializeViews() {
         // Initialize views
