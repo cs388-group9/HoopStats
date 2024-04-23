@@ -93,30 +93,6 @@ class TrackStatsActivity : AppCompatActivity() {
         }
     }
 
-    private fun fetchGameData(gameId: String) {
-        val dbRef = FirebaseDatabase.getInstance().getReference("games/$gameId")
-        dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val game = dataSnapshot.getValue(Game::class.java)
-                gameTitleTextView.text = game?.gameName ?: "Unknown Game"
-                game?.teamIds?.let { teamIds ->
-                    if (teamIds.size >= 2) {
-                        team1Id = teamIds[0]  // Set team1Id
-                        team2Id = teamIds[1]  // Set team2Id
-                        fetchTeamName(team1Id!!, team1NameTextView)
-                        fetchTeamName(team2Id!!, team2NameTextView)
-                        fetchPlayers(team1Id!!, playerAdapterA)
-                        fetchPlayers(team2Id!!, playerAdapterB)
-                    }
-                }
-
-            }
-
-            override fun onCancelled(databaseError: DatabaseError) {
-                Log.e("TrackStatsActivity", "Failed to fetch game data: ${databaseError.message}")
-            }
-        })
-    }
 
     private fun fetchTeamName(teamId: String, textView: TextView) {
         val teamRef = FirebaseDatabase.getInstance().getReference("teams/$teamId/teamName")
@@ -134,6 +110,30 @@ class TrackStatsActivity : AppCompatActivity() {
 
 
 
+    private fun fetchGameData(gameId: String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("games/$gameId")
+        dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val game = dataSnapshot.getValue(Game::class.java)
+                gameTitleTextView.text = game?.gameName ?: "Unknown Game"
+                game?.teamIds?.let { teamIds ->
+                    if (teamIds.size >= 2) {
+                        team1Id = teamIds[0]  // Set team1Id
+                        team2Id = teamIds[1]  // Set team2Id
+                        fetchTeamName(team1Id!!, team1NameTextView)
+                        fetchTeamName(team2Id!!, team2NameTextView)
+                        fetchPlayers(team1Id!!, playerAdapterA)
+                        fetchPlayers(team2Id!!, playerAdapterB)
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("TrackStatsActivity", "Failed to fetch game data: ${databaseError.message}")
+            }
+        })
+    }
+
     private fun fetchPlayers(teamId: String, adapter: PlayerAdapter) {
         val playersRef = FirebaseDatabase.getInstance().getReference("players/$teamId")
         playersRef.addValueEventListener(object : ValueEventListener {
@@ -145,6 +145,8 @@ class TrackStatsActivity : AppCompatActivity() {
                 }
                 if (players.isNotEmpty()) {
                     adapter.updatePlayers(players)
+                    val totalPoints = calculateTotalPoints(players.toTypedArray())
+                    updateTeamTotalPoints(teamId, totalPoints)
                 } else {
                     Log.d("TrackStatsActivity", "No players found for team $teamId")
                 }
@@ -154,6 +156,23 @@ class TrackStatsActivity : AppCompatActivity() {
                 Log.e("TrackStatsActivity", "Failed to fetch players for team $teamId: ${databaseError.message}")
             }
         })
+    }
+
+    private fun updateTeamTotalPoints(teamId: String, totalPoints: Int) {
+        if (teamId == team1Id) {
+            findViewById<TextView>(R.id.team1TotalPoints).text = totalPoints.toString()
+        } else if (teamId == team2Id) {
+            findViewById<TextView>(R.id.team2TotalPoints).text = totalPoints.toString()
+        }
+    }
+
+
+    private fun calculateTotalPoints(players: Array<Player>): Int {
+        var totalPoints = 0
+        for (player in players) {
+            totalPoints += player.twoPointers * 2 + player.threePointers * 3 + player.freeThrows
+        }
+        return totalPoints
     }
 
 
