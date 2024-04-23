@@ -1,86 +1,125 @@
 package com.example.hoopstats
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Button
+import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.hoopstats.models.Player
+import com.example.hoopstats.models.Team
+import com.google.firebase.database.*
 
 class ViewStatsActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
+    private lateinit var gameTitleTextView: TextView
+    private lateinit var team1NameTextView: TextView
+    private lateinit var team2NameTextView: TextView
+    private lateinit var team1ReboundsTextView: TextView
+    private lateinit var team1AssistsTextView: TextView
+    private lateinit var team1TwoPointersTextView: TextView
+    private lateinit var team1ThreePointersTextView: TextView
+    private lateinit var team1FreeThrowsTextView: TextView
+    private lateinit var team1TotalPointsTextView: TextView
+
+    private lateinit var team2ReboundsTextView: TextView
+    private lateinit var team2AssistsTextView: TextView
+    private lateinit var team2TwoPointersTextView: TextView
+    private lateinit var team2ThreePointersTextView: TextView
+    private lateinit var team2FreeThrowsTextView: TextView
+    private lateinit var team2TotalPointsTextView: TextView
+
+    private var gameId: String? = null
+    private var team1Id: String? = null
+    private var team2Id: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_stats)
 
-        // Retrieve data from intent extras
-        val gameId = intent.getStringExtra("gameId") ?: ""
-        val teamAPlayers = intent.getSerializableExtra("teamAPlayers") as Array<Player>
-        val teamBPlayers = intent.getSerializableExtra("teamBPlayers") as Array<Player>
+        initializeViews()
+        retrieveIntentData()
+        fetchTeamStats()
+    }
 
-        // Initialize views
-        val gameTitleTextView = findViewById<TextView>(R.id.gameTitleTextView)
-        val team1NameTextView = findViewById<TextView>(R.id.team1NameTextView)
-        val team2NameTextView = findViewById<TextView>(R.id.team2NameTextView)
+    private fun initializeViews() {
+        gameTitleTextView = findViewById(R.id.gameTitleTextView)
+        team1NameTextView = findViewById(R.id.team1NameTextView)
+        team2NameTextView = findViewById(R.id.team2NameTextView)
 
-        // Set game title
-        gameTitleTextView.text = intent.getStringExtra("gameName") ?: ""
+        team1ReboundsTextView = findViewById(R.id.team1ReboundsTextView)
+        team1AssistsTextView = findViewById(R.id.team1AssistsTextView)
+        team1TwoPointersTextView = findViewById(R.id.team1TwoPointersTextView)
+        team1ThreePointersTextView = findViewById(R.id.team1ThreePointersTextView)
+        team1FreeThrowsTextView = findViewById(R.id.team1FreeThrowsTextView)
+        team1TotalPointsTextView = findViewById(R.id.team1TotalPointsTextView)
 
-        // Set team names
-// Inside onCreate method
-        val team1Name = intent.getStringExtra("team1Name") ?: ""
-        val team2Name = intent.getStringExtra("team2Name") ?: ""
+        team2ReboundsTextView = findViewById(R.id.team2ReboundsTextView)
+        team2AssistsTextView = findViewById(R.id.team2AssistsTextView)
+        team2TwoPointersTextView = findViewById(R.id.team2TwoPointersTextView)
+        team2ThreePointersTextView = findViewById(R.id.team2ThreePointersTextView)
+        team2FreeThrowsTextView = findViewById(R.id.team2FreeThrowsTextView)
+        team2TotalPointsTextView = findViewById(R.id.team2TotalPointsTextView)
+    }
 
-// Set team names
-        team1NameTextView.text = team1Name
-        team2NameTextView.text = team2Name
+    private fun retrieveIntentData() {
+        gameId = intent.getStringExtra("gameId")
+        team1Id = intent.getStringExtra("team1Id")
+        team2Id = intent.getStringExtra("team2Id")
+        Log.e("!!!!!!!!!!!", gameId.toString())
+        Log.e("!!!!!!!!!!!", team1Id.toString())
+        Log.e("!!!!!!!!!!!", team2Id.toString())
 
-        // Initialize TrackStatsButton
-        val trackStatsButton = findViewById<Button>(R.id.trackStatsButton)
-        trackStatsButton.setOnClickListener {
-            // Navigate back to TrackStatsActivity
-            onBackPressed()
+        val gameName = intent.getStringExtra("gameName")
+        gameTitleTextView.text = gameName ?: "Game Details"
+
+        team1NameTextView.text = intent.getStringExtra("team1Name") ?: "Team 1"
+        team2NameTextView.text = intent.getStringExtra("team2Name") ?: "Team 2"
+    }
+
+    private fun fetchTeamStats() {
+        team1Id?.let {
+            fetchTeamData(it, true)
         }
-
-        // Update team stats
-        updateTeamStats(teamAPlayers, teamBPlayers)
-    }
-
-    private fun updateTeamStats(teamAPlayers: Array<Player>, teamBPlayers: Array<Player>) {
-        // Update team A stats
-        findViewById<TextView>(R.id.team1ReboundsTextView).text = calculateTotal(teamAPlayers) { it.rebounds }.toString()
-        findViewById<TextView>(R.id.team1AssistsTextView).text = calculateTotal(teamAPlayers) { it.assists }.toString()
-        findViewById<TextView>(R.id.team1TwoPointersTextView).text = calculateTotal(teamAPlayers) { it.twoPointers }.toString()
-        findViewById<TextView>(R.id.team1ThreePointersTextView).text = calculateTotal(teamAPlayers) { it.threePointers }.toString()
-        findViewById<TextView>(R.id.team1FreeThrowsTextView).text = calculateTotal(teamAPlayers) { it.freeThrows }.toString()
-
-        // Update team B stats
-        findViewById<TextView>(R.id.team2ReboundsTextView).text = calculateTotal(teamBPlayers) { it.rebounds }.toString()
-        findViewById<TextView>(R.id.team2AssistsTextView).text = calculateTotal(teamBPlayers) { it.assists }.toString()
-        findViewById<TextView>(R.id.team2TwoPointersTextView).text = calculateTotal(teamBPlayers) { it.twoPointers }.toString()
-        findViewById<TextView>(R.id.team2ThreePointersTextView).text = calculateTotal(teamBPlayers) { it.threePointers }.toString()
-        findViewById<TextView>(R.id.team2FreeThrowsTextView).text = calculateTotal(teamBPlayers) { it.freeThrows }.toString()
-
-        val team1TotalPoints = calculateTotalPoints(teamAPlayers)
-        val team2TotalPoints = calculateTotalPoints(teamBPlayers)
-
-        findViewById<TextView>(R.id.team1TotalPointsTextView).text = team1TotalPoints.toString()
-        findViewById<TextView>(R.id.team2TotalPointsTextView).text = team2TotalPoints.toString()
-
-    }
-
-    private fun calculateTotalPoints(players: Array<Player>): Int {
-        var totalPoints = 0
-        for (player in players) {
-            totalPoints += player.twoPointers * 2 + player.threePointers * 3 + player.freeThrows
+        team2Id?.let {
+            fetchTeamData(it, false)
         }
-        return totalPoints
     }
-    private fun calculateTotal(players: Array<Player>, selector: (Player) -> Int): Int {
-        var total = 0
-        for (player in players) {
-            total += selector(player)
+
+    private fun fetchTeamData(teamId: String, isTeam1: Boolean) {
+        val teamRef = FirebaseDatabase.getInstance().getReference("teams/$teamId")
+        teamRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                snapshot.getValue(Team::class.java)?.let { team ->
+                    if (isTeam1) {
+                        updateTeamStatsView(team, true)
+                    } else {
+                        updateTeamStatsView(team, false)
+                    }
+                } ?: Log.e("ViewStatsActivity", "No team data found for teamId: $teamId")
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e("ViewStatsActivity", "Error fetching team data for teamId: $teamId", error.toException())
+            }
+        })
+    }
+
+    private fun updateTeamStatsView(team: Team, isTeam1: Boolean) {
+        val totalPoints = team.twoPointers * 2 + team.threePointers * 3 + team.freeThrows
+
+        if (isTeam1) {
+            team1ReboundsTextView.text = team.rebounds.toString()
+            team1AssistsTextView.text = team.assists.toString()
+            team1TwoPointersTextView.text = team.twoPointers.toString()
+            team1ThreePointersTextView.text = team.threePointers.toString()
+            team1FreeThrowsTextView.text = team.freeThrows.toString()
+            team1TotalPointsTextView.text = totalPoints.toString()
+        } else {
+            team2ReboundsTextView.text = team.rebounds.toString()
+            team2AssistsTextView.text = team.assists.toString()
+            team2TwoPointersTextView.text = team.twoPointers.toString()
+            team2ThreePointersTextView.text = team.threePointers.toString()
+            team2FreeThrowsTextView.text = team.freeThrows.toString()
+            team2TotalPointsTextView.text = totalPoints.toString()
         }
-        return total
     }
+
 }
