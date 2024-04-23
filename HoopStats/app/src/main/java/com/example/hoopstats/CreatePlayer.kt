@@ -50,13 +50,16 @@ class CreatePlayerActivity : AppCompatActivity() {
 
     private fun savePlayerToDatabase(playerName: String, teamId: String) {
         val database = FirebaseDatabase.getInstance().reference
-        val newPlayer = Player(playerName) // Creating a new player with default stats
         val playerKey = database.child("players").child(teamId).push().key // Generate a unique key for the player under the team ID
 
         if (playerKey == null) {
             Toast.makeText(this, "Could not generate player key.", Toast.LENGTH_LONG).show()
             return
         }
+
+        val playerId = playerKey // Store the generated player key as the playerId
+
+        val newPlayer = Player(playerName, teamId, 0, 0, 0, 0, 0, playerId) // Creating a new player with default stats and team ID
 
         // Save the player under the generated key within the team ID
         database.child("players").child(teamId).child(playerKey).setValue(newPlayer)
