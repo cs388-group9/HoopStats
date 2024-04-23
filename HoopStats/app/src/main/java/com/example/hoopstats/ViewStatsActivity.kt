@@ -2,6 +2,7 @@ package com.example.hoopstats
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.hoopstats.models.Team
@@ -37,6 +38,10 @@ class ViewStatsActivity : AppCompatActivity() {
         initializeViews()
         retrieveIntentData()
         fetchTeamStats()
+        val trackStatsButton = findViewById<Button>(R.id.trackStatsButton)
+        trackStatsButton.setOnClickListener {
+            finish() // Close the current activity (ViewStatsActivity)
+        }
     }
 
     private fun initializeViews() {
