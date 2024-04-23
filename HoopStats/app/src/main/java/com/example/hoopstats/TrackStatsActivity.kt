@@ -55,6 +55,18 @@ class TrackStatsActivity : AppCompatActivity() {
         playerAdapterB = PlayerAdapter(teamBPlayers)
         teamBRecyclerView.adapter = playerAdapterB
         teamBRecyclerView.layoutManager = LinearLayoutManager(this)
+// Mock players for team A with random stats
+        val mockPlayerA1 = Player("Player A1", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+        val mockPlayerA2 = Player("Player A2", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+        val mockPlayerA3 = Player("Player A3", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+
+// Mock players for team B with random stats
+        val mockPlayerB1 = Player("Player B1", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+        val mockPlayerB2 = Player("Player B2", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+        val mockPlayerB3 = Player("Player B3", (0..10).random(), (0..10).random(), (0..5).random(), (0..3).random(), (0..5).random())
+
+        teamAPlayers.addAll(listOf(mockPlayerA1, mockPlayerA2, mockPlayerA3))
+        teamBPlayers.addAll(listOf(mockPlayerB1, mockPlayerB2, mockPlayerB3))
 
         // Setup the create player button
         val createPlayerButton = findViewById<Button>(R.id.createPlayerButton)
@@ -75,7 +87,6 @@ class TrackStatsActivity : AppCompatActivity() {
                 Log.e("TrackStatsActivity", "Team IDs are null.")
             }
         }
-
     }
 
     private fun setupRecyclerViews() {
@@ -83,7 +94,6 @@ class TrackStatsActivity : AppCompatActivity() {
     }
 
     private fun fetchGameData(gameId: String) {
-        // Fetch game data, including the team IDs
         val dbRef = FirebaseDatabase.getInstance().getReference("games/$gameId")
         dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -95,6 +105,8 @@ class TrackStatsActivity : AppCompatActivity() {
                         team2Id = teamIds[1]
                         fetchTeamName(team1Id!!, team1NameTextView, playerAdapterA, teamAPlayers)
                         fetchTeamName(team2Id!!, team2NameTextView, playerAdapterB, teamBPlayers)
+                        fetchTeamPlayers(team1Id!!, teamAPlayers, playerAdapterA)
+                        fetchTeamPlayers(team2Id!!, teamBPlayers, playerAdapterB)
                     }
                 }
             }
@@ -126,6 +138,23 @@ class TrackStatsActivity : AppCompatActivity() {
             }
         })
     }
+    private fun fetchTeamPlayers(teamId: String, playerList: MutableList<Player>, adapter: PlayerAdapter) {
+        val teamPlayersRef = FirebaseDatabase.getInstance().getReference("teams/$teamId/players")
+        teamPlayersRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (playerSnapshot in dataSnapshot.children) {
+                    val player = playerSnapshot.getValue(Player::class.java)
+                    player?.let { playerList.add(it) }
+                }
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("TrackStatsActivity", "Failed to fetch team players: ${databaseError.message}")
+            }
+        })
+    }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
