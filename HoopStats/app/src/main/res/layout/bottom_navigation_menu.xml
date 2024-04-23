@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@color/colorPrimary">
 
     <!-- Track Stats Button -->
     <Button
@@ -10,25 +12,31 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Track Stats"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"/>
+        android:textColor="@android:color/white"
+        android:background="@drawable/bottom_navigation_button_selector"
+        android:drawableLeft="@drawable/ic_area_chart"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/guideline"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="8dp"/>
 
-    <!-- View Stats Button -->
     <Button
         android:id="@+id/viewStatsButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="View Stats"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"/>
+        android:textColor="@android:color/white"
+        android:background="@drawable/bottom_navigation_button_selector"
+        android:drawableLeft="@drawable/ic_align_vertical_bottom"
+    app:layout_constraintStart_toEndOf="@id/guideline"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"/>
+
 
     <!-- Guideline to divide the layout into two equal parts -->
     <androidx.constraintlayout.widget.Guideline
@@ -36,7 +44,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
-
+        app:layout_constraintGuide_end="205dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

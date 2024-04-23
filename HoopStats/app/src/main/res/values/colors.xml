@@ -7,7 +7,8 @@
     <color name="purple">#800080</color>
     <color name="blue">#459DE4</color>
     <color name="red">#FF0000</color>
-    <color name="colorPrimary">#FF6200EE</color>
-
+    <color name="colorPrimary">#CC5500</color>
+    <color name="colorPrimaryDark">#8B0000</color> <!-- New color added -->
+    <color name="colorGrey">#808080</color> <!-- New color added -->
     <!-- Add more colors as needed -->
 </resources>
