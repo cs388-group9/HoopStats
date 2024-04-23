@@ -102,7 +102,6 @@
 
     <!-- Create A Player Button -->
 
-    <!-- Bottom Navigation Menu -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/team2RecyclerView"
         android:layout_width="0dp"
