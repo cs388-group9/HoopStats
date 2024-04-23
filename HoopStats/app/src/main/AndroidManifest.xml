@@ -52,6 +52,10 @@
             android:name=".IncrementStatsActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".ViewStatsActivity"
+            android:exported="false">
+        </activity>
 
     </application>
 
