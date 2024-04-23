@@ -2,6 +2,7 @@ package com.example.hoopstats
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import com.example.hoopstats.models.Player
 import com.google.firebase.database.*
 
 class TrackStatsActivity : AppCompatActivity() {
+
     private lateinit var teamARecyclerView: RecyclerView
     private lateinit var teamBRecyclerView: RecyclerView
     private lateinit var gameTitleTextView: TextView
@@ -28,6 +30,7 @@ class TrackStatsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_track_stats)
+        Log.d("TrackStatsActivity", "onCreate: Started")
 
         gameId = intent.getStringExtra("gameId") ?: ""
 
@@ -58,6 +61,9 @@ class TrackStatsActivity : AppCompatActivity() {
         createPlayerButton.setOnClickListener {
             // Make sure team IDs are retrieved and stored before attempting to pass them to the CreatePlayerActivity
             if(team1Id != null && team2Id != null) {
+                Log.d("TrackStatsActivity", "Team 1 ID: $team1Id")
+                Log.d("TrackStatsActivity", "Team 2 ID: $team2Id")
+
                 val intent = Intent(this, CreatePlayerActivity::class.java).apply {
                     putExtra("team1Name", team1NameTextView.text.toString())
                     putExtra("team2Name", team2NameTextView.text.toString())
@@ -65,17 +71,15 @@ class TrackStatsActivity : AppCompatActivity() {
                     putExtra("team2Id", team2Id)
                 }
                 startActivity(intent)
+            } else {
+                Log.e("TrackStatsActivity", "Team IDs are null.")
             }
         }
-    }
-    private fun setupRecyclerViews() {
-        playerAdapterA = PlayerAdapter(teamAPlayers)
-        teamARecyclerView.adapter = playerAdapterA
-        teamARecyclerView.layoutManager = LinearLayoutManager(this)
 
-        playerAdapterB = PlayerAdapter(teamBPlayers)
-        teamBRecyclerView.adapter = playerAdapterB
-        teamBRecyclerView.layoutManager = LinearLayoutManager(this)
+    }
+
+    private fun setupRecyclerViews() {
+        // Already initialized in initializeViews()
     }
 
     private fun fetchGameData(gameId: String) {
@@ -121,5 +125,37 @@ class TrackStatsActivity : AppCompatActivity() {
                 // Handle errors
             }
         })
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == REQUEST_CODE_INCREMENT_STATS && resultCode == RESULT_OK && data != null) {
+            val updatedPlayer = data.getSerializableExtra("updatedPlayer") as? Player
+            if (updatedPlayer != null) {
+                updatePlayerStats(updatedPlayer)
+                Log.d("TrackStats", "Received updated player stats: $updatedPlayer")
+            }
+        }
+    }
+
+    private fun updatePlayerStats(updatedPlayer: Player) {
+        val indexA = teamAPlayers.indexOfFirst { it.playerName == updatedPlayer.playerName }
+        val indexB = teamBPlayers.indexOfFirst { it.playerName == updatedPlayer.playerName }
+
+        if (indexA != -1) {
+            teamAPlayers[indexA] = updatedPlayer
+            playerAdapterA.notifyItemChanged(indexA)
+        }
+
+        if (indexB != -1) {
+            teamBPlayers[indexB] = updatedPlayer
+            playerAdapterB.notifyItemChanged(indexB)
+        }
+    }
+
+
+
+    companion object {
+        private const val REQUEST_CODE_INCREMENT_STATS = 1001
     }
 }

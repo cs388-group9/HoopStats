@@ -53,7 +53,7 @@ class IncrementStatsActivity : AppCompatActivity() {
         freeThrowsIncrementButton = findViewById(R.id.freeThrowsIncrementButton)
         submitButton = findViewById(R.id.submitButton)
 
-        player = intent.getSerializableExtra("player") as? Player ?: Player("", 0, 0, 0, 0, 0, 0)
+        player = intent.getSerializableExtra("player") as? Player ?: Player("", 0, 0, 0, 0, 0)
 
         playerNameTextView.text = player.playerName
         reboundsValueTextView.text = player.rebounds.toString()
