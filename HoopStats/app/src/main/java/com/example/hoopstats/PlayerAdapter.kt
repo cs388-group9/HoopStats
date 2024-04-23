@@ -1,6 +1,5 @@
 package com.example.hoopstats
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -10,13 +9,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoopstats.models.Player
 
-class PlayerAdapter(private val players: MutableList<Player>) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
+class PlayerAdapter(private var players: MutableList<Player> = mutableListOf()) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
 
-    private var itemClickListener: ((Player) -> Unit)? = null
-
-    fun setOnItemClickListener(listener: (Player) -> Unit) {
-        itemClickListener = listener
+    fun updatePlayers(players: List<Player>) {
+        this.players.clear()
+        this.players.addAll(players)
+        notifyDataSetChanged()
     }
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.player_item_layout, parent, false)
@@ -42,7 +42,6 @@ class PlayerAdapter(private val players: MutableList<Player>) : RecyclerView.Ada
             reboundsTextView.text = player.rebounds.toString()
             assistsTextView.text = player.assists.toString()
 
-            // Set click listener to the player name button
             playerNameButton.setOnClickListener {
                 // Create an intent to start IncrementStatsActivity
                 val intent = Intent(itemView.context, IncrementStatsActivity::class.java)
@@ -52,5 +51,6 @@ class PlayerAdapter(private val players: MutableList<Player>) : RecyclerView.Ada
                 itemView.context.startActivity(intent)
             }
         }
+
     }
 }
