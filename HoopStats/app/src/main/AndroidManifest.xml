@@ -16,9 +16,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/AppTheme">
-
         </activity>
 
         <activity
@@ -26,21 +25,29 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".CreateGame"
-            />
-        <activity android:name=".TrackStats" />
-
-        <activity android:name=".GamesMain"/>
-        <activity android:name=".IncrementStatsActivity">
-
-        <!-- Any additional activity configuration here -->
+        <activity
+            android:name=".CreateGame"
+            android:exported="false">
         </activity>
 
+        <activity
+            android:name=".GamesMain"
+            android:exported="false">
+            <!-- Any additional activity configuration here -->
+        </activity>
+        <activity
+            android:name=".TrackStatsActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".CreatePlayerActivity"
+            android:exported="false">
+        </activity>
 
     </application>
 

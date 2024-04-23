@@ -1,16 +1,13 @@
 package com.example.hoopstats.models
 
-import java.io.Serializable
-
 data class Player(
     val playerName: String,
-    val team: Int,
-    var rebounds: Int,
-    var assists: Int,
-    var twoPointers: Int,
-    var threePointers: Int,
-    var freeThrows: Int
-) : Serializable {
+    val rebounds: Int = 0,
+    val assists: Int = 0,
+    val twoPointers: Int = 0,
+    val threePointers: Int = 0,
+    val freeThrows: Int = 0
+) {
     val totalPoints: Int
-        get() = twoPointers + threePointers + freeThrows
+        get() = twoPointers * 2 + threePointers * 3 + freeThrows  // Assuming 2 points for twoPointers, 3 for threePointers
 }
