@@ -46,8 +46,32 @@ class CreateGame : AppCompatActivity() {
         val team1Id = databaseRef.child("teams").push().key ?: return
         val team2Id = databaseRef.child("teams").push().key ?: return
 
-        val team1 = Team(team1Id, team1Name, mutableListOf(), gameId)
-        val team2 = Team(team2Id, team2Name, mutableListOf(), gameId)
+        val team1 = Team(
+            teamId = team1Id,
+            teamName = team1Name,
+            playerIds = mutableListOf(),
+            gameId = gameId,
+            rebounds = 0,
+            assists = 0,
+            twoPointers = 0,
+            threePointers = 0,
+            freeThrows = 0,
+            totalPoints = 0
+        )
+
+        val team2 = Team(
+            teamId = team2Id,
+            teamName = team2Name,
+            playerIds = mutableListOf(),
+            gameId = gameId,
+            rebounds = 0,
+            assists = 0,
+            twoPointers = 0,
+            threePointers = 0,
+            freeThrows = 0,
+            totalPoints = 0
+        )
+
         val game = Game(gameId, gameName, listOf(team1Id, team2Id), userId)
 
         // Prepare the combined data map

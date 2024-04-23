@@ -46,6 +46,8 @@ class TrackStatsActivity : AppCompatActivity() {
                 putExtra("teamBPlayers", teamBPlayers.toTypedArray())
                 putExtra("team1Name", team1NameTextView.text.toString())
                 putExtra("team2Name", team2NameTextView.text.toString())
+                putExtra("team1Id", team1Id)
+                putExtra("team2Id", team2Id)
             }
             startActivity(intent)
 

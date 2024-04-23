@@ -45,9 +45,22 @@ class IncrementStatsActivity : AppCompatActivity() {
 
         fetchPlayerStats()
         submitButton.setOnClickListener {
+            val oldPlayer = player.copy() // Assuming 'player' is the current player stats before updates
             updateStatsInDatabase()
+            val newPlayer = Player(
+                playerName = player.playerName,
+                teamId = player.teamId,
+                rebounds = reboundsValueTextView.text.toString().toInt(),
+                assists = assistsValueTextView.text.toString().toInt(),
+                twoPointers = twoPointersValueTextView.text.toString().toInt(),
+                threePointers = threePointersValueTextView.text.toString().toInt(),
+                freeThrows = freeThrowsValueTextView.text.toString().toInt(),
+                playerId = player.playerId
+            )
+            updateTeamStatsInDatabase(oldPlayer, newPlayer) // Update team stats based on player updates
             finish() // Finish the current activity to return to the previous one
         }
+
     }
 
     private fun initializeViews() {
@@ -141,4 +154,40 @@ class IncrementStatsActivity : AppCompatActivity() {
                 Log.e("IncrementStatsActivity", "Failed to update $statName in the database for player $playerId: $exception")
             }
     }
+    private fun updateTeamStatsInDatabase(oldPlayer: Player, newPlayer: Player) {
+        val teamRef = FirebaseDatabase.getInstance().getReference("teams/$teamId")
+        teamRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val team = dataSnapshot.getValue(Team::class.java)
+                if (team != null) {
+                    val reboundsDiff = newPlayer.rebounds - oldPlayer.rebounds
+                    val assistsDiff = newPlayer.assists - oldPlayer.assists
+                    val twoPointersDiff = newPlayer.twoPointers - oldPlayer.twoPointers
+                    val threePointersDiff = newPlayer.threePointers - oldPlayer.threePointers
+                    val freeThrowsDiff = newPlayer.freeThrows - oldPlayer.freeThrows
+
+                    val updatedTeam = team.copy(
+                        rebounds = team.rebounds + reboundsDiff,
+                        assists = team.assists + assistsDiff,
+                        twoPointers = team.twoPointers + twoPointersDiff,
+                        threePointers = team.threePointers + threePointersDiff,
+                        freeThrows = team.freeThrows + freeThrowsDiff
+                    )
+
+                    teamRef.setValue(updatedTeam)
+                        .addOnSuccessListener {
+                            Log.d("IncrementStatsActivity", "Team stats updated successfully in the database")
+                        }
+                        .addOnFailureListener { exception ->
+                            Log.e("IncrementStatsActivity", "Failed to update team stats in the database: $exception")
+                        }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("IncrementStatsActivity", "Failed to fetch team stats: ${databaseError.toException()}")
+            }
+        })
+    }
+
 }
