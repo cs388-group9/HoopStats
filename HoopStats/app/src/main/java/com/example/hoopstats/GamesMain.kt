@@ -1,12 +1,12 @@
 package com.example.hoopstats
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -51,6 +51,10 @@ class GamesMain : AppCompatActivity() {
             signOutAndStartSignInActivity()
         }
 
+        findViewById<Button>(R.id.joinGameButton).setOnClickListener {
+            startActivity(Intent(this, JoinGame::class.java))
+        }
+
         fetchGames() // Fetch games from Firebase
     }
 
@@ -61,6 +65,7 @@ class GamesMain : AppCompatActivity() {
             .build()
         return GoogleSignIn.getClient(this, gso)
     }
+
     private fun fetchGames() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId == null) {
