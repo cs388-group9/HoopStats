@@ -35,8 +35,10 @@
             />
         <activity android:name=".TrackStats" />
 
-        <activity android:name=".GamesMain">
-            <!-- Any additional activity configuration here -->
+        <activity android:name=".GamesMain"/>
+        <activity android:name=".IncrementStatsActivity">
+
+        <!-- Any additional activity configuration here -->
         </activity>
 
 

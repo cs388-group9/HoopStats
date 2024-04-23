@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Here are all the IDs defined in the XML layout:
+
+1. `backButton`
+2. `titleTextView`
+3. `reboundsTextView`
+4. `reboundsDecrementButton`
+5. `reboundsValueTextView`
+6. `reboundsIncrementButton`
+7. `assistsTextView`
+8. `assistsDecrementButton`
+9. `assistsValueTextView`
+10. `assistsIncrementButton`
+11. `twoPointersTextView`
+12. `twoPointersDecrementButton`
+13. `twoPointersValueTextView`
+14. `twoPointersIncrementButton`
+15. `threePointersTextView`
+16. `threePointersDecrementButton`
+17. `threePointersValueTextView`
+18. `threePointersIncrementButton`
+19. `freeThrowsTextView`
+20. `freeThrowsDecrementButton`
+21. `freeThrowsValueTextView`
+22. `freeThrowsIncrementButton`
+23. `submitButton`
+
+These IDs uniquely identify each view element in the layout.
+-->
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:text="Player's stats"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Rebounds -->
+    <TextView
+        android:id="@+id/reboundsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Rebounds"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/reboundsDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/reboundsTextView"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/reboundsValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_toStartOf="@id/reboundsDecrementButton"
+        android:layout_alignBottom="@id/reboundsTextView"/>
+
+    <Button
+        android:id="@+id/reboundsIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/reboundsValueTextView"
+        android:layout_alignBottom="@id/reboundsTextView"/>
+
+    <!-- Assists -->
+    <TextView
+        android:id="@+id/assistsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Assists"
+        android:layout_below="@id/reboundsTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/assistsDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/assistsTextView"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/assistsValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_toStartOf="@id/assistsDecrementButton"
+        android:layout_alignBottom="@id/assistsTextView"/>
+
+    <Button
+        android:id="@+id/assistsIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/assistsValueTextView"
+        android:layout_alignBottom="@id/assistsTextView"/>
+
+    <!-- Two Pointers -->
+    <TextView
+        android:id="@+id/twoPointersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Two Pointers"
+        android:layout_below="@id/assistsTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/twoPointersDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/twoPointersTextView"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/twoPointersValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_toStartOf="@id/twoPointersDecrementButton"
+        android:layout_alignBottom="@id/twoPointersTextView"/>
+
+    <Button
+        android:id="@+id/twoPointersIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/twoPointersValueTextView"
+        android:layout_alignBottom="@id/twoPointersTextView"/>
+
+    <!-- Three Pointers -->
+    <TextView
+        android:id="@+id/threePointersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Three Pointers"
+        android:layout_below="@id/twoPointersTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/threePointersDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/threePointersTextView"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/threePointersValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_toStartOf="@id/threePointersDecrementButton"
+        android:layout_alignBottom="@id/threePointersTextView"/>
+
+    <Button
+        android:id="@+id/threePointersIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/threePointersValueTextView"
+        android:layout_alignBottom="@id/threePointersTextView"/>
+
+    <!-- Free Throws -->
+    <TextView
+        android:id="@+id/freeThrowsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Free Throws"
+        android:layout_below="@id/threePointersTextView"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Button
+        android:id="@+id/freeThrowsDecrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/freeThrowsTextView"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/freeThrowsValueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:layout_toStartOf="@id/freeThrowsDecrementButton"
+        android:layout_alignBottom="@id/freeThrowsTextView"/>
+
+    <Button
+        android:id="@+id/freeThrowsIncrementButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/transparent"
+        android:layout_toStartOf="@id/freeThrowsValueTextView"
+        android:layout_alignBottom="@id/freeThrowsTextView"/>
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"/>
+
+</RelativeLayout>
+
