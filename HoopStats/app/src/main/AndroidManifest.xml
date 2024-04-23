@@ -48,6 +48,10 @@
             android:name=".CreatePlayerActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".IncrementStatsActivity"
+            android:exported="false">
+        </activity>
 
     </application>
 

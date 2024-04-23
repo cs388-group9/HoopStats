@@ -2,7 +2,6 @@ package com.example.hoopstats
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoopstats.models.Player
 
-class PlayerAdapter(private val context: Context, private val players: MutableList<Player>) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
-
-    // Setters and getters for players list
-    fun setPlayers(newPlayers: List<Player>) {
-        players.clear()
-        players.addAll(newPlayers)
-        notifyDataSetChanged()
-    }
+class PlayerAdapter(private val players: MutableList<Player>) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
 
     private var itemClickListener: ((Player) -> Unit)? = null
 
@@ -34,12 +26,10 @@ class PlayerAdapter(private val context: Context, private val players: MutableLi
     override fun onBindViewHolder(holder: PlayerViewHolder, position: Int) {
         val player = players[position]
         holder.bind(player)
-        Log.d("PlayerAdapter", "Player bound: ${player.playerName}")
     }
 
     override fun getItemCount(): Int = players.size
 
-    // ViewHolder class
     inner class PlayerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val playerNameButton: Button = itemView.findViewById(R.id.playerNameButton)
         private val pointsTextView: TextView = itemView.findViewById(R.id.pointsTextView)
@@ -55,11 +45,11 @@ class PlayerAdapter(private val context: Context, private val players: MutableLi
             // Set click listener to the player name button
             playerNameButton.setOnClickListener {
                 // Create an intent to start IncrementStatsActivity
-                val intent = Intent(context, IncrementStatsActivity::class.java)
+                val intent = Intent(itemView.context, IncrementStatsActivity::class.java)
                 // Pass player's data to IncrementStatsActivity
                 intent.putExtra("player", player)
                 // Start IncrementStatsActivity
-                context.startActivity(intent)
+                itemView.context.startActivity(intent)
             }
         }
     }
