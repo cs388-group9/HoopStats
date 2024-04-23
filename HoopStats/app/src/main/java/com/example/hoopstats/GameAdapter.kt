@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoopstats.models.Game
+import com.google.firebase.database.FirebaseDatabase
 
 class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
 
@@ -31,23 +32,40 @@ class GameAdapter(private val games: List<Game>) : RecyclerView.Adapter<GameAdap
 
         fun bind(game: Game) {
             gameButton.text = game.gameName
-            // Set team names
-            teamNamesTextView.text = "${game.teamNames[0]} vs ${game.teamNames[1]}"
-            // Set game ID
             gameIdTextView.text = "Game ID: ${game.gameId}"
+
+            // Fetch and display team names
+            fetchTeamNames(game.teamIds) { teamNames ->
+                teamNamesTextView.text = teamNames.joinToString(" vs ")
+            }
 
             gameButton.setOnClickListener {
                 // Open TrackStats activity for the selected game
                 val context = itemView.context
-                val intent = Intent(context, TrackStats::class.java)
-                // Pass game data to TrackStats activity if needed
+                val intent = Intent(context, TrackStatsActivity::class.java)
                 intent.putExtra("gameId", game.gameId)
-                intent.putExtra("gameName", game.gameName)
-                intent.putExtra("team1Name", game.teamNames[0])
-                intent.putExtra("team2Name", game.teamNames[1])
                 context.startActivity(intent)
             }
         }
 
+        private fun fetchTeamNames(teamIds: List<String>, callback: (List<String>) -> Unit) {
+            val names = mutableListOf<String>()
+            val dbRef = FirebaseDatabase.getInstance().getReference("teams")
+
+            teamIds.forEach { teamId ->
+                dbRef.child(teamId).get().addOnSuccessListener { dataSnapshot ->
+                    val teamName = dataSnapshot.child("teamName").value.toString()
+                    names.add(teamName)
+                    if (names.size == teamIds.size) {
+                        callback(names)
+                    }
+                }.addOnFailureListener {
+                    names.add("Unknown Team")
+                    if (names.size == teamIds.size) {
+                        callback(names)
+                    }
+                }
+            }
+        }
     }
 }
