@@ -1,7 +1,6 @@
 package com.example.hoopstats
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
@@ -69,5 +68,4 @@ class CreatePlayerActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to add player: ${exception.message}", Toast.LENGTH_LONG).show()
             }
     }
-
 }
