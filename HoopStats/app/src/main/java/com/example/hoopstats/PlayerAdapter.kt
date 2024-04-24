@@ -1,6 +1,7 @@
 package com.example.hoopstats
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +10,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoopstats.models.Player
 
-class PlayerAdapter(private var players: MutableList<Player> = mutableListOf()) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
-
+class PlayerAdapter(
+    private var players: MutableList<Player> = mutableListOf(),
+    private val userID: String?,
+    private val submittedByUserIds: Array<String> // New parameter to accept user IDs array
+) : RecyclerView.Adapter<PlayerAdapter.PlayerViewHolder>() {
     fun updatePlayers(players: List<Player>) {
         this.players.clear()
         this.players.addAll(players)
@@ -42,13 +46,20 @@ class PlayerAdapter(private var players: MutableList<Player> = mutableListOf()) 
             reboundsTextView.text = player.rebounds.toString()
             assistsTextView.text = player.assists.toString()
 
-            playerNameButton.setOnClickListener {
-                // Create an intent to start IncrementStatsActivity
-                val intent = Intent(itemView.context, IncrementStatsActivity::class.java)
-                // Pass player's data to IncrementStatsActivity
-                intent.putExtra("player", player)
-                // Start IncrementStatsActivity
-                itemView.context.startActivity(intent)
+            val isCurrentUserInArray = userID != null && submittedByUserIds.contains(userID)
+            Log.d("UserIDLog", "Array size: ${submittedByUserIds.size}")
+            submittedByUserIds.forEach { userId ->
+                Log.e("#############", "User ID: $userId")
+            }
+
+            if (isCurrentUserInArray) {
+                playerNameButton.isEnabled = false
+            } else {
+                playerNameButton.setOnClickListener {
+                    val intent = Intent(itemView.context, IncrementStatsActivity::class.java)
+                    intent.putExtra("player", player)
+                    itemView.context.startActivity(intent)
+                }
             }
         }
 
