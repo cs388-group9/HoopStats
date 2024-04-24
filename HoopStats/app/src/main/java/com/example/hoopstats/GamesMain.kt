@@ -1,11 +1,13 @@
 package com.example.hoopstats
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,6 +21,11 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.codepath.asynchttpclient.AsyncHttpClient
+import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
+import org.json.JSONObject
+import com.codepath.asynchttpclient.RequestParams
+import okhttp3.Headers
 
 class GamesMain : AppCompatActivity() {
 
@@ -51,7 +58,72 @@ class GamesMain : AppCompatActivity() {
             signOutAndStartSignInActivity()
         }
 
+        findViewById<Button>(R.id.joinGameButton).setOnClickListener {
+            startActivity(Intent(this, JoinGame::class.java))
+        }
+
+        findViewById<Button>(R.id.submitWeatherButton).setOnClickListener {
+            var zipcode = findViewById<EditText>(R.id.zipcodeEditText)
+            val client = AsyncHttpClient()
+            val params = RequestParams()
+            params["zip"] = zipcode.text.toString()+",US"
+            params["appid"] = "491d5553c05bab2ee795fee79e672d3e"
+
+            client["https://api.openweathermap.org/geo/1.0/zip", params, object :
+                    JsonHttpResponseHandler() {
+                override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
+                    val latitude = json.jsonObject.getDouble("lat")
+                    val longitude = json.jsonObject.getDouble("lon")
+                    val params2 = RequestParams()
+                    params2["lat"] = latitude.toString()
+                    params2["lon"] = longitude.toString()
+                    params2["appid"] = "491d5553c05bab2ee795fee79e672d3e"
+                    params2["units"] = "imperial"
+                    client["https://api.openweathermap.org/data/2.5/weather", params2, object :
+                            JsonHttpResponseHandler() {
+                        override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
+                            // Access a JSON object response with `json.jsonObject`
+                            val firstItem = JSONObject(json.jsonObject.getJSONArray("weather").get(0).toString())
+                            val weatherDescription = firstItem.getString("description")
+                            val temp = json.jsonObject.getJSONObject("main").getDouble("temp").toString()
+                            val tempFeelsLike = json.jsonObject.getJSONObject("main").getDouble("feels_like").toString()
+                            val humidity = json.jsonObject.getJSONObject("main").getDouble("humidity").toString()
+                            val wind = json.jsonObject.getJSONObject("wind").getDouble("speed").toString()
+                            showWeatherDialog(temp, tempFeelsLike, weatherDescription, humidity, wind, zipcode.text.toString())
+                        }
+
+                        override fun onFailure(
+                                statusCode: Int,
+                                headers: Headers?,
+                                response: String,
+                                throwable: Throwable?
+                        ) {
+                        }
+                    }]
+
+                }
+
+                override fun onFailure(
+                        statusCode: Int,
+                        headers: Headers?,
+                        response: String,
+                        throwable: Throwable?
+                ) {
+                }
+            }]
+        }
+
         fetchGames() // Fetch games from Firebase
+    }
+
+    private fun showWeatherDialog(temp : String, tempFeelsLike : String, weatherDescription: String, humidity : String, wind : String, zipcode : String) {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder
+        .setMessage("Temperature: "+ temp + "F\n\n"+weatherDescription.get(0).uppercase()+weatherDescription.substring(1)+"\nFeels Like: "+tempFeelsLike+"F"+"\n\nHumidity: "+humidity+"%\nWinds: "+wind+"mph")
+        .setTitle("Weather - "+zipcode)
+
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 
     private fun initializeGoogleSignIn(): GoogleSignInClient {
