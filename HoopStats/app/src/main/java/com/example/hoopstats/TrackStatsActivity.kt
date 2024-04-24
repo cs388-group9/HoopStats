@@ -28,6 +28,7 @@ class TrackStatsActivity : AppCompatActivity() {
     private var team1Id: String? = null
     private var team2Id: String? = null
     private val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
+    private var submittedByUserIds: Array<String> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +38,10 @@ class TrackStatsActivity : AppCompatActivity() {
         setupRecyclerViews()
 
         val gameId = intent.getStringExtra("gameId") ?: ""
+        submittedByUserIds = intent.getStringArrayExtra("submittedByUserIds") ?: arrayOf()
+        Log.e("TrackStatsDebug", submittedByUserIds.size.toString())
+
+
         fetchGameData(gameId)
         val viewStatsButton = findViewById<Button>(R.id.viewStatsButton)
         viewStatsButton.setOnClickListener {
@@ -64,7 +69,6 @@ class TrackStatsActivity : AppCompatActivity() {
 
         // Check if the current user's ID is in the array of submittedByUserIds
         val userInArray = userId != null && intent.getStringArrayExtra("submittedByUserIds")?.contains(userId) == true
-        Log.e("!!!!!!!!!!!!!!!!!!", intent.getStringArrayExtra("submittedByUserIds").toString())
 
         // Hide and disable the "Create a Player" button if the user's ID is in the array
         if (userInArray) {
@@ -92,8 +96,10 @@ class TrackStatsActivity : AppCompatActivity() {
 
 
     private fun setupRecyclerViews() {
-        playerAdapterA = PlayerAdapter()
-        playerAdapterB = PlayerAdapter()
+        submittedByUserIds = intent.getStringArrayExtra("submittedByUserIds") ?: arrayOf()
+        Log.e("@@@@@@@@@@@@@", submittedByUserIds.size.toString())
+        playerAdapterA = PlayerAdapter(teamAPlayers, userId, submittedByUserIds)
+        playerAdapterB = PlayerAdapter(teamBPlayers, userId, submittedByUserIds)
 
         teamARecyclerView.apply {
             adapter = playerAdapterA
@@ -105,6 +111,8 @@ class TrackStatsActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@TrackStatsActivity)
         }
     }
+
+
 
     private fun fetchTeamName(teamId: String, textView: TextView) {
         val teamRef = FirebaseDatabase.getInstance().getReference("teams/$teamId/teamName")
