@@ -3,6 +3,7 @@ package com.example.hoopstats
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hoopstats.models.Game
 import com.example.hoopstats.models.Player
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class TrackStatsActivity : AppCompatActivity() {
@@ -25,6 +27,7 @@ class TrackStatsActivity : AppCompatActivity() {
     private var teamBPlayers: MutableList<Player> = mutableListOf()
     private var team1Id: String? = null
     private var team2Id: String? = null
+    private val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +40,6 @@ class TrackStatsActivity : AppCompatActivity() {
         fetchGameData(gameId)
         val viewStatsButton = findViewById<Button>(R.id.viewStatsButton)
         viewStatsButton.setOnClickListener {
-            // Create an intent to navigate to ViewStatsActivity
-// Inside the viewStatsButton.setOnClickListener
             val intent = Intent(this, ViewStatsActivity::class.java).apply {
                 putExtra("gameId", gameId)
                 putExtra("gameName", gameTitleTextView.text.toString())
@@ -50,7 +51,6 @@ class TrackStatsActivity : AppCompatActivity() {
                 putExtra("team2Id", team2Id)
             }
             startActivity(intent)
-
         }
     }
 
@@ -61,24 +61,35 @@ class TrackStatsActivity : AppCompatActivity() {
         team1NameTextView = findViewById(R.id.team1NameTextView)
         team2NameTextView = findViewById(R.id.team2NameTextView)
         val createPlayerButton = findViewById<Button>(R.id.createPlayerButton)
-        createPlayerButton.setOnClickListener {
-            // Make sure team IDs are retrieved and stored before attempting to pass them to the CreatePlayerActivity
-            if(team1Id != null && team2Id != null) {
-                Log.d("TrackStatsActivity", "Team 1 ID: $team1Id")
-                Log.d("TrackStatsActivity", "Team 2 ID: $team2Id")
 
-                val intent = Intent(this, CreatePlayerActivity::class.java).apply {
-                    putExtra("team1Name", team1NameTextView.text.toString())
-                    putExtra("team2Name", team2NameTextView.text.toString())
-                    putExtra("team1Id", team1Id)
-                    putExtra("team2Id", team2Id)
+        // Check if the current user's ID is in the array of submittedByUserIds
+        val userInArray = userId != null && intent.getStringArrayExtra("submittedByUserIds")?.contains(userId) == true
+        Log.e("!!!!!!!!!!!!!!!!!!", intent.getStringArrayExtra("submittedByUserIds").toString())
+
+        // Hide and disable the "Create a Player" button if the user's ID is in the array
+        if (userInArray) {
+            createPlayerButton.visibility = View.GONE
+            createPlayerButton.isEnabled = false
+        } else {
+            createPlayerButton.setOnClickListener {
+                if (team1Id != null && team2Id != null) {
+                    val intent = Intent(this, CreatePlayerActivity::class.java).apply {
+                        putExtra("team1Name", team1NameTextView.text.toString())
+                        putExtra("team2Name", team2NameTextView.text.toString())
+                        putExtra("team1Id", team1Id)
+                        putExtra("team2Id", team2Id)
+                    }
+                    startActivity(intent)
+                } else {
+                    Log.e("TrackStatsActivity", "Team IDs are null.")
                 }
-                startActivity(intent)
-            } else {
-                Log.e("TrackStatsActivity", "Team IDs are null.")
             }
         }
     }
+
+
+
+
 
     private fun setupRecyclerViews() {
         playerAdapterA = PlayerAdapter()
@@ -95,7 +106,6 @@ class TrackStatsActivity : AppCompatActivity() {
         }
     }
 
-
     private fun fetchTeamName(teamId: String, textView: TextView) {
         val teamRef = FirebaseDatabase.getInstance().getReference("teams/$teamId/teamName")
         teamRef.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -110,8 +120,6 @@ class TrackStatsActivity : AppCompatActivity() {
         })
     }
 
-
-
     private fun fetchGameData(gameId: String) {
         val dbRef = FirebaseDatabase.getInstance().getReference("games/$gameId")
         dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -120,8 +128,8 @@ class TrackStatsActivity : AppCompatActivity() {
                 gameTitleTextView.text = game?.gameName ?: "Unknown Game"
                 game?.teamIds?.let { teamIds ->
                     if (teamIds.size >= 2) {
-                        team1Id = teamIds[0]  // Set team1Id
-                        team2Id = teamIds[1]  // Set team2Id
+                        team1Id = teamIds[0]
+                        team2Id = teamIds[1]
                         fetchTeamName(team1Id!!, team1NameTextView)
                         fetchTeamName(team2Id!!, team2NameTextView)
                         fetchPlayers(team1Id!!, playerAdapterA)
@@ -168,7 +176,6 @@ class TrackStatsActivity : AppCompatActivity() {
         }
     }
 
-
     private fun calculateTotalPoints(players: Array<Player>): Int {
         var totalPoints = 0
         for (player in players) {
@@ -176,6 +183,4 @@ class TrackStatsActivity : AppCompatActivity() {
         }
         return totalPoints
     }
-
-
 }

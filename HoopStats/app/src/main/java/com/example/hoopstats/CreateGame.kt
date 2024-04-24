@@ -72,7 +72,7 @@ class CreateGame : AppCompatActivity() {
             totalPoints = 0
         )
 
-        val game = Game(gameId, gameName, listOf(team1Id, team2Id), userId)
+        val game = Game(gameId, gameName, listOf(team1Id, team2Id), userId,submittedByUserIds = emptyList())
 
         // Prepare the combined data map
         val updates = mapOf(

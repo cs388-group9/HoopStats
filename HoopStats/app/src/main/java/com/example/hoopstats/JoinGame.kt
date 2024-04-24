@@ -1,11 +1,11 @@
 package com.example.hoopstats
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.hoopstats.models.Game
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -13,8 +13,7 @@ class JoinGame : AppCompatActivity() {
 
     private lateinit var gameIdEditText: EditText
     private lateinit var submitButton: Button
-    private lateinit var mAuth: FirebaseAuth
-    private lateinit var databaseReference: DatabaseReference
+    private lateinit var database: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,43 +21,50 @@ class JoinGame : AppCompatActivity() {
 
         gameIdEditText = findViewById(R.id.gameIdEditText)
         submitButton = findViewById(R.id.submitButton)
-        mAuth = FirebaseAuth.getInstance()
-        databaseReference = FirebaseDatabase.getInstance().reference
 
-        // Add a click listener to the return button
-        findViewById<Button>(R.id.returnButton).setOnClickListener {
-            // Finish the current activity and return to the previous activity (GamesMain)
-            finish()
-        }
+        database = FirebaseDatabase.getInstance().reference
 
         submitButton.setOnClickListener {
-            val gameId = gameIdEditText.text.toString()
+            val gameId = gameIdEditText.text.toString().trim()
             if (gameId.isNotEmpty()) {
-                searchGameInDatabase(gameId)
+                joinGame(gameId)
             } else {
-                Toast.makeText(this, "Please enter a game ID", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please enter a Game ID", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun searchGameInDatabase(gameId: String) {
-        databaseReference.child("games").child(gameId).addListenerForSingleValueEvent(object : ValueEventListener {
+    private fun joinGame(gameId: String) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
+
+        // Fetch game data from Firebase
+        database.child("games").child(gameId).addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                if (dataSnapshot.exists()) {
-                    // Game found, navigate to GamesMain with game data
-                    val intent = Intent(this@JoinGame, GamesMain::class.java)
-                    intent.putExtra("gameId", gameId)
-                    startActivity(intent)
-                    finish()
+                val game = dataSnapshot.getValue(Game::class.java)
+                if (game != null) {
+                    // Modify the game data to add the user's ID to submittedByUserIds
+                    val submittedByUserIds = game.submittedByUserIds.toMutableList()
+                    submittedByUserIds.add(userId)
+
+                    // Update the game data in Firebase
+                    val updates = hashMapOf<String, Any>(
+                        "/games/$gameId/submittedByUserIds" to submittedByUserIds
+                    )
+                    database.updateChildren(updates)
+                        .addOnSuccessListener {
+                            Toast.makeText(this@JoinGame, "Joined game successfully!", Toast.LENGTH_SHORT).show()
+                            finish()
+                        }
+                        .addOnFailureListener {
+                            Toast.makeText(this@JoinGame, "Failed to join game. Please try again.", Toast.LENGTH_SHORT).show()
+                        }
                 } else {
-                    // Game not found
-                    Toast.makeText(this@JoinGame, "Game not found, try again", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@JoinGame, "Game not found", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Handle database error
-                Toast.makeText(this@JoinGame, "Error searching for game: ${databaseError.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@JoinGame, "Database error: ${databaseError.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }

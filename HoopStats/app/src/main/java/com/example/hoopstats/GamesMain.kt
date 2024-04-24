@@ -74,27 +74,29 @@ class GamesMain : AppCompatActivity() {
         }
 
         val databaseReference = FirebaseDatabase.getInstance().getReference("games")
-        databaseReference.orderByChild("creatorUserId").equalTo(userId)
-            .addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    gamesList.clear()
-                    for (snapshot in dataSnapshot.children) {
-                        val game = snapshot.getValue(Game::class.java)
-                        if (game != null) {
+        databaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                gamesList.clear()
+                for (snapshot in dataSnapshot.children) {
+                    val game = snapshot.getValue(Game::class.java)
+                    if (game != null) {
+                        if (game.creatorUserId == userId || game.submittedByUserIds.contains(userId)) {
                             gamesList.add(game)
-                        } else {
-                            Log.e("GamesMain", "Error parsing game data: ${snapshot.key}")
                         }
+                    } else {
+                        Log.e("GamesMain", "Error parsing game data: ${snapshot.key}")
                     }
-                    gameAdapter.notifyDataSetChanged()
-                    updateUI()
                 }
+                gameAdapter.notifyDataSetChanged()
+                updateUI()
+            }
 
-                override fun onCancelled(databaseError: DatabaseError) {
-                    Log.e("GamesMain", "Database error: ${databaseError.message}")
-                }
-            })
+            override fun onCancelled(databaseError: DatabaseError) {
+                Log.e("GamesMain", "Database error: ${databaseError.message}")
+            }
+        })
     }
+
 
     private fun updateUI() {
         if (gamesList.isEmpty()) {
